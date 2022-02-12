@@ -1,4 +1,4 @@
-##AWS S3 Storage configuration:
+## AWS S3 Storage configuration:
 
 Go to ./cms/.env and use the following example env:
 
@@ -15,7 +15,7 @@ STORAGE_AWS_REGION="us-east-2"
 STORAGE_AWS_ACL="private"
 ```
 
-##Directus typescript generation:
+## Directus typescript generation:
 
 https://github.com/elierotenberg/directus-typescript-gen
 
@@ -25,7 +25,7 @@ Example: npx directus-typescript-gen --host http://localhost:8055 --email admin@
 
 Can be used with @directus/sdk, as well as react-query
 
-##Deploy to HEROKU
+## Deploy to HEROKU
 
 The process is a bit annoying, but this is what I did:
 
