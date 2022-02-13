@@ -40,3 +40,7 @@ The process is a bit annoying, but this is what I did:
 9. After it pushed, run `heroku run directus bootstrap`
 10. Then if you go to the app it should work
 11. If not just trigger a rebuild
+
+## Working with images
+
+Directus returns images with their UUID. Simply call `<directus_link>/assets/<image_id>`, and you'll get access to the image, no matter where the image is uploaded to
