@@ -1,0 +1,374 @@
+version: 1
+directus: 9.5.1
+collections:
+  - collection: articles
+    meta:
+      collection: articles
+      icon: null
+      note: null
+      display_template: null
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+    schema:
+      schema: public
+      name: articles
+      comment: null
+fields:
+  - collection: articles
+    field: id
+    type: uuid
+    schema:
+      name: id
+      table: articles
+      schema: public
+      data_type: uuid
+      is_nullable: false
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: created_at
+    type: timestamp
+    schema:
+      name: created_at
+      table: articles
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: created_at
+      special:
+        - date-created
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: updated_at
+    type: timestamp
+    schema:
+      name: updated_at
+      table: articles
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: updated_at
+      special:
+        - date-updated
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: title
+    type: string
+    schema:
+      name: title
+      table: articles
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: title
+      special: null
+      interface: input
+      options:
+        trim: true
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: body
+    type: text
+    schema:
+      name: body
+      table: articles
+      schema: public
+      data_type: text
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: body
+      special: null
+      interface: input-rich-text-md
+      options: null
+      display: null
+      display_options:
+        format: true
+        bold: true
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: image
+    type: uuid
+    schema:
+      name: image
+      table: articles
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+    meta:
+      collection: articles
+      field: image
+      special:
+        - file
+      interface: file-image
+      options: {}
+      display: image
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: isPublished
+    type: boolean
+    schema:
+      name: isPublished
+      table: articles
+      schema: public
+      data_type: boolean
+      is_nullable: false
+      generation_expression: null
+      default_value: true
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: isPublished
+      special:
+        - boolean
+      interface: boolean
+      options: null
+      display: boolean
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: code
+    type: string
+    schema:
+      name: code
+      table: articles
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: code
+      special: null
+      interface: input-code
+      options:
+        language: brainfuck
+      display: null
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+relations:
+  - collection: articles
+    field: image
+    related_collection: directus_files
+    schema:
+      constraint_name: articles_image_foreign
+      table: articles
+      column: image
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: SET NULL
+    meta:
+      many_collection: articles
+      many_field: image
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
