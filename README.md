@@ -37,7 +37,7 @@ Can be used with @directus/sdk, as well as react-query
 8. Create ADMIN_EMAIL and ADMIN_PASSWORD vars, and fill it in
 9. In terminal, run `heroku login`, then do `heroku git:remote -a <app_name>`, then do a `git push heroku master`
 10. After it pushed, run `heroku run directus bootstrap`
-11. Run the snapshot by doing `heroku run npx directus schema snapshot --yes ./snapshot.yaml`, which migrates the production database
+11. Run the snapshot by doing `heroku run npx directus schema apply --yes ./snapshot.yaml`, which migrates the production database
 12. Tada everything should work
 
 Run step 12 every time you make any changes to the data models
